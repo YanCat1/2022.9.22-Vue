@@ -1,10 +1,8 @@
  <template>
     <ul class="todo-main">
-        <MyItem></MyItem>
-        <MyItem></MyItem>
-        <MyItem></MyItem>
-        <MyItem></MyItem>
-    </ul>
+        <MyItem v-for="todoObj in todos" :key=todoObj.id 
+        :todo=todoObj>{{todoObj}}</MyItem>
+    </ul> 
   
 </template>
 
@@ -12,7 +10,16 @@
     import MyItem  from './MyItem.vue'
 
     export default {
-        name:'MyList',  
+        name:'MyList',
+        data(){
+        return {
+          todos:[
+            {id:'001',title:'抽烟',done:true},
+            {id:'002',title:'喝酒',done:false},
+            {id:'003',title:'开车',done:true}
+          ]
+        }
+      },  
         components:{
             MyItem,
         },
