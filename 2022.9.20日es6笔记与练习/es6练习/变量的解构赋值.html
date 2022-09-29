@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const NAMES = ['yzd','aaa','ccc']
+        // let [a,b,c] = NAMES
+        // console.log(a);
+        // console.log(b);
+        // console.log(c);
+
+        // 关于对象的解构赋值
+        const zhao = {
+            name:'赵本山',
+            age:13,
+            gender:'男',
+            xiaopin:function(){
+                console.log('我可以演小品')
+            }
+        }
+
+        let {name,age,xiaopin} = zhao;
+        console.log(name);
+        console.log(age);
+        console.log(xiaopin);
+
+    </script>
+</body>
+</html>

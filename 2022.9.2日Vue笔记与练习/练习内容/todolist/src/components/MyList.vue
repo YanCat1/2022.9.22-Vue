@@ -1,7 +1,7 @@
  <template>
     <ul class="todo-main">
-        <MyItem v-for="todoObj in todos" :key=todoObj.id 
-        :todo=todoObj>{{todoObj}}</MyItem>
+        <MyItem v-for="todoObj in todos" :key="todoObj.id" 
+        :todo='todoObj'/>
     </ul> 
   
 </template>
@@ -12,14 +12,14 @@
     export default {
         name:'MyList',
         data(){
-        return {
-          todos:[
-            {id:'001',title:'抽烟',done:true},
-            {id:'002',title:'喝酒',done:false},
-            {id:'003',title:'开车',done:true}
-          ]
-        }
-      },  
+            return {
+                todos:[
+                    {id:'001',title:'抽烟',done:true},
+                    {id:'002',title:'喝酒',done:true},
+                    {id:'003',title:'开车',done:false}
+                ]
+            }
+        },  
         components:{
             MyItem,
         },
