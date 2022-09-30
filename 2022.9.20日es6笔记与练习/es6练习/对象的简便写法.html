@@ -9,8 +9,15 @@
 <body>
     <script>
         let name = 'yzd'
-        let str = `${name}是我的名字`
-        console.log(str);
+        function change(){
+            console.log(`我是一个函数`);
+        }
+        const info ={
+            name,
+            change
+        }
+        console.log(info.name);
+        info.change()
     </script>
 </body>
 </html>
